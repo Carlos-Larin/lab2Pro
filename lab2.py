@@ -1,5 +1,6 @@
+#Este es El ejemplo :D este codigo lo Hizo Larin
 class Libro():
-    tamaño=""
+    tamaño="17x24"
     paginas=0
     precioVenta=0
     peso=0
@@ -20,42 +21,57 @@ class Libro():
         Estado="Registrado"
         return Estado
     
-    def DatosLibro(Libro,NumPag,Nombre,TipoTapa,URLLibro,ISBNLibro):
-        Libro.paginas=NumPag
-        Libro.precioVenta=Libro.precioXPag()*NumPag
-        Libro.peso=Libro.pesoXPag()*NumPag
-        Libro.titulo=Nombre
-        Libro.tapa=TipoTapa
-        Libro.URL=URLLibro
-        Libro.ISBN=ISBNLibro
-
     def PrecioXPagina(self):
         return  self.precioXPag
     
     def PesoXPagina(self):
         return  self.pesoXPag
+    def TamañoLibro(self):
+        return  self.tamaño
     
-    def RecibirDatosLibro(Libro):
-        Nombre=input("Hola porfavor inrgresa el Titulo del libro: ")
-        NumPag=int(input("Numero de Paginas: "))
-        TipoTapa=input("TapaDura (D)/TapaBlanda (B): ")
+    def DatosLibro(Libro,NumPag,Nombre,TipoTapa,URLLibro,ISBNLibro):
+        Libro.paginas=NumPag
+        Libro.precioVenta=Libro.precioXPag*NumPag
+        Libro.peso=Libro.pesoXPag*NumPag
+        Libro.titulo=Nombre
+        Libro.tapa=TipoTapa
+        Libro.URL=URLLibro
+        Libro.ISBN=ISBNLibro
+    
+    def RecibeDatosLibro(self):
+        Nombre = input("Hola por favor ingresa el Titulo del libro: ")
+        NumPag = int(input("Número de Páginas: "))
+        TipoTapa = input("TapaDura (D)/TapaBlanda (B): ")
         URLLibro = input("URL? (S/N): ")
-        ISBNLibro=input("ISBN: ")
+        ISBNLibro = input("ISBN: ")
         print("*****************************************")
-        DatosLibro(Libro,NumPag,Nombre,TipoTapa,URLLibro,ISBNLibro)
+        self.DatosLibro(NumPag, Nombre, TipoTapa, URLLibro, ISBNLibro)
 
 
+    def MostrarDatosLibro(self):
+        print("*****************************************")
+        print("Tamaño= ", self.tamaño)
+        print("Paginas= ", self.paginas)
+        print("Precio Venta= ", self.precioVenta)
+        print("Peso= ", self.peso)
+        print("Precio x Pagina= ", self.PrecioXPagina())  # Con paréntesis
+        print("Peso X Pagina= ", self.PesoXPagina())  # Con paréntesis
+        print("Titulo= ", self.titulo)
+        print("tapa= ", self.tapa)
+        print("URL= ", self.URL)
+        print("ISBN= ", self.ISBN)
+        print("Estado= ", self.Estado)
+        print("*****************************************")
 
 
-    def MostrarDatosLibro(Libro):
-        print("Tamaño= ",Libro.tamaño)
-        print("Paginas= ",Libro.paginas)
-        print("Precio Venta= ",Libro.precioVenta)
-        print("Peso= ",Libro.peso)
-        print("Precio x Pagina= ",Libro.PrecioXPagina)
-        print("Peso X Pagina= ",Libro.PesoXPagina)
-        print("Titulo= ",Libro.titulo)
-        print("tapa= ",Libro.tapa)
-        print("URL= ",Libro.URL)
-        print("ISBN= ",Libro.ISBN)
-        print("Estado= ",Libro.Estado)  
+Libro1=Libro()
+Libro2=Libro()
+
+print("DATOS LIBRO 1")
+Libro1.RecibeDatosLibro()
+
+print("DATOS LIBRO 2")
+Libro2.RecibeDatosLibro()
+
+Libro1.MostrarDatosLibro()
+Libro2.MostrarDatosLibro()

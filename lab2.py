@@ -11,7 +11,7 @@ class Libro():
     URL=""
     ISBN=""
     Estado="No Hay Registros del Libro"
-
+#Este es El constructor
     def __init__(self):
         self.tamaño="17x24"
         self.precioXPag=300
@@ -28,7 +28,7 @@ class Libro():
         return  self.pesoXPag
     def TamañoLibro(self):
         return  self.tamaño
-    
+    #Este Segemnto del codigo me ayuda a hacer los procesos
     def DatosLibro(Libro,NumPag,Nombre,TipoTapa,URLLibro,ISBNLibro):
         Libro.paginas=NumPag
         Libro.precioVenta=Libro.precioXPag*NumPag
@@ -37,7 +37,7 @@ class Libro():
         Libro.tapa=TipoTapa
         Libro.URL=URLLibro
         Libro.ISBN=ISBNLibro
-    
+    #area por donde entran los datos bien inzanos
     def RecibeDatosLibro(self):
         Nombre = input("Hola por favor ingresa el Titulo del libro: ")
         NumPag = int(input("Número de Páginas: "))
@@ -47,7 +47,7 @@ class Libro():
         print("*****************************************")
         self.DatosLibro(NumPag, Nombre, TipoTapa, URLLibro, ISBNLibro)
 
-
+    #por aqui Salen los datos it is the output
     def MostrarDatosLibro(self):
         print("*****************************************")
         print("Tamaño= ", self.tamaño)

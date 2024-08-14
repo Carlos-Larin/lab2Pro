@@ -1,66 +1,74 @@
-#la Veterinaria se requiere 8 caracteristicas max
 class ElPerroj():
-    Tipo="Perro"
-    NombrePerro=""
-    Raza=""
-    Edad=""
-    ColorPelaje=""
-    Dueño=""
-    Peso=0
-    Estado="No Atendido"
+    Tipo = "Perro"
+    NombrePerro = ""
+    Raza = ""
+    Edad = 0
+    ColorPelaje = ""
+    Dueño = ""
+    Peso = 0
+    Estado = "No Atendido"
     
     def __init__(self):
-        self.Tipo="Perro"
-        self.Peso=0
+        self.Tipo = "Perro"
+        self.Peso = 0
     
     def RegistrarPerro(self):
-        return print("ATENDIDO :D")
+        self.Estado = "Atendido"
+        print("ATENDIDO :D")
     
     def PesoPerro(self):
-        if(self.Peso>10):
-            self.PerroGrande=self.Peso
-            print(f"Perro Grande su peso es:{self.PerroGrande}")
+        if self.Peso > 10:
+            print(f"Perro Grande su peso es: {self.Peso} kg")
         else:
-            self.PerroPequeño=self.Peso
-            print(f"Perro Pequeño{self.PerroPequeño}")
+            print(f"Perro Pequeño su peso es: {self.Peso} kg")
     
-    def DatosPerro(ElPerroj,Tipo,NomPer,RazaBand,Edad,ColorPelaje,Dueño,PesoPerro):
-        ElPerroj.Tipo=Tipo
-        ElPerroj.NombrePerro=NomPer
-        ElPerroj.Raza=RazaBand
-        ElPerroj.Edad=Edad
-        ElPerroj.ColorPelaje=ColorPelaje
-        ElPerroj.Dueño=Dueño
-        ElPerroj.Peso=PesoPerro()
+    def DatosPerro(self, Tipo, NomPer, RazaBand, Edad, ColorPelaje, Dueño, PesoPerro,Estado):
+        self.Tipo = Tipo
+        self.NombrePerro = NomPer
+        self.Raza = RazaBand
+        self.Edad = Edad
+        self.ColorPelaje = ColorPelaje
+        self.Dueño = Dueño
+        self.Peso = PesoPerro
+        self.Estado=Estado
 
-    def RecibirDatosDelPerro(NomPer,RazaBand,Edad,ColorPelaje,Dueño,PesoPerro):
+    def RecibirDatosDelPerro(self):
         print("**************Doctor Chopper****************")
-        NomPer=input("Nombre de la Mascota: ")
-        RazaBand=input("Que raza es: ")
-        Edad=int(input("Cual es la edad: "))
-        ColorPelaje=input("El color del Pelaje: ")
-        Dueño= input("Su dueño es: ")
-        PesoPerro=int(input("Cuanto Pesa en kg: "))
+        NomPer = input("Nombre de la Mascota: ")
+        RazaBand = input("¿Qué raza es?: ")
+        Edad = int(input("¿Cuál es la edad?: "))
+        ColorPelaje = input("¿Cuál es el color del pelaje?: ")
+        Dueño = input("¿Quién es su dueño?: ")
+        PesoPerro = int(input("¿Cuánto pesa en kg?: "))
+        Estado=input("El perro ya Fue atendido? (S/N): ").lower()
         print("*********************************************")
-        ElPerroj.DatosPerro(NomPer,RazaBand,Edad,ColorPelaje,Dueño,PesoPerro)
+        self.DatosPerro("Perro", NomPer, RazaBand, Edad, ColorPelaje, Dueño, PesoPerro,Estado)
     
     def MostrarDatosPerro(self):
         print("**********************************************")
-        print("El Nombre del perro es: ",self.NombrePerro)
-        print("Raza del canino: ",self.Raza)
-        print("Edad del perro es: ",self.Edad)
-        print("Color del Pelaje: ",self.ColorPelaje)
-        print("El Dueño o encargado es: ",self.Dueño)
-        print("Peso del perro es: ",self.PesoPerro())
+        print("El Nombre del perro es: ", self.NombrePerro)
+        print("Raza del canino: ", self.Raza)
+        print("Edad del perro es: ", self.Edad)
+        print("Color del Pelaje: ", self.ColorPelaje)
+        print("El Dueño o encargado es: ", self.Dueño)
+        print("Peso del perro es: ", self.Peso, "kg")
+        if self.Peso > 10:
+            print("Este es un perro grande.")
+        else:
+            print("Este es un perro pequeño.")
+        print("Estado: ", self.Estado)
+        if self.Estado=="s":
+            print("Su estado es Atendido.")
+        else:
+            print("Aun no fue atendido D:")
         print("*****************************************")
 
-perro1=ElPerroj()
-
+# Creación de una instancia de ElPerroj
+perro1 = ElPerroj()
 print("*****************************************")
-print("DatosPerro")
-perro1.RecibirDatosDelPerro
+print("Datos del Perro")
+perro1.RecibirDatosDelPerro() 
 print("*****************************************")
-perro1.MostrarDatosPerro
+perro1.MostrarDatosPerro() 
 print("*****************************************")
-
 

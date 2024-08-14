@@ -54,8 +54,8 @@ class Libro():
         print("Paginas= ", self.paginas)
         print("Precio Venta= ", self.precioVenta)
         print("Peso= ", self.peso)
-        print("Precio x Pagina= ", self.PrecioXPagina())  # Con paréntesis
-        print("Peso X Pagina= ", self.PesoXPagina())  # Con paréntesis
+        print("Precio x Pagina= ", self.PrecioXPagina()) 
+        print("Peso X Pagina= ", self.PesoXPagina()) 
         print("Titulo= ", self.titulo)
         print("tapa= ", self.tapa)
         print("URL= ", self.URL)

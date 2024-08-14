@@ -45,7 +45,7 @@ class ElPerroj():
         self.DatosPerro("Perro", NomPer, RazaBand, Edad, ColorPelaje, Dueño, PesoPerro,Estado)
     
     def MostrarDatosPerro(self):
-        print("**********************************************")
+        print("**************Doctor Chopper****************")
         print("El Nombre del perro es: ", self.NombrePerro)
         print("Raza del canino: ", self.Raza)
         print("Edad del perro es: ", self.Edad)
@@ -61,14 +61,13 @@ class ElPerroj():
             print("Su estado es Atendido.")
         else:
             print("Aun no fue atendido D:")
-        print("*****************************************")
 
 # Creación de una instancia de ElPerroj
 perro1 = ElPerroj()
-print("*****************************************")
+print("**************Doctor Chopper****************")
 print("Datos del Perro")
-perro1.RecibirDatosDelPerro() 
 print("*****************************************")
+perro1.RecibirDatosDelPerro() 
 perro1.MostrarDatosPerro() 
 print("*****************************************")
 

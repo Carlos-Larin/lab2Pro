@@ -1,3 +1,4 @@
+#Echo por Carlos Larin y con una playlist de rock a media noche
 class Papeleria():
     Cuaderno = ""
     Lapices = ""

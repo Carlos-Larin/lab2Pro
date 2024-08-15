@@ -78,7 +78,7 @@ class Papeleria():
             print("Recuerda, tenemos producto exclusivo en lápices.")
         print("*****************************************")
 
-# Creación de una instancia de Papeleria
+# Creacion de una instancia de Papeleria
 Compra1 = Papeleria()
 print("***************Bienvenido al sistema nakama***************")
 Compra1.RegistrarCompra()

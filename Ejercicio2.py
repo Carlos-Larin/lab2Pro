@@ -45,16 +45,13 @@ class Papeleria():
     
     def RegistrarCompra(self):
         print("*****Bienvenido al sistema nakama*****")
-        
         self.LlevasCuadernos = input("¿Llevarás cuadernos? (S/N): ").lower()
         if self.LlevasCuadernos == "s":
             self.Cuaderno = input("Tipo de cuaderno (grande/pequeño): ").lower()
             self.CantidadCuadernos = int(input("¿Cuántos cuadernos llevas?: "))
         else: 
             print("Recuerda, tenemos producto exclusivo en cuadernos.")
-        
         print("**********************************************")   
-        
         self.LlevasLapices = input("¿Llevarás lápices? (S/N): ").lower()
         if self.LlevasLapices == "s":
             self.Lapices = input("Tipo de lápiz (grafito/color): ").lower()

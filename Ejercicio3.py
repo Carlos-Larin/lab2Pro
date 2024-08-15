@@ -13,27 +13,25 @@ class Autos():
     Color=""
     Tipo=""
     Vin=""
-    Numero_Motor=0
+    Numero_Motor=""
     PrecioCosto=0
     PrecioVenta=0
     Asientos=0
     Ruedas=0
 
-
     def __init__(self):
         self.PrecioCosto=0
         self.PrecioVenta=0
-        self.Numero_Motor=0
+        self.Numero_Motor=""
         self.Año=0
         self.Asientos=0
         self.Ruedas=0
 
     def InfoDelVehiCULO(self):
-        print("El vehiculo fue adquerido a: $")
         self.PrecioVenta=self.PrecioCosto*1.4
-        print(self.PrecioCosto)
-        print("El vehiculo queda a: $")
-        print(self.PrecioVenta)
+        print(f"El vehiculo fue adquerido a: ${self.PrecioCosto}")
+        print(f"El vehiculo queda a: ${self.PrecioVenta}")
+        
 
     def RegistrarVehiculo(self):
         print("Hola bienvenido al Concecionario de Marine Ford")
@@ -43,7 +41,7 @@ class Autos():
         self.Color=input("Color del Vehiculo: ")
         self.Tipo=input("Tipo de vehiculo: ")
         self.Vin=input("VIN: ")
-        self.Numero_Motor=int(input("Numero de Motor: "))
+        self.Numero_Motor=input("Numero de Motor: ")
         self.Asientos=int(input("Cantidad de Asientos: "))
         self.Ruedas=int(input("Cantidad de Ruedas: "))
         self.PrecioCosto=int(input("Precio Costo: $"))
@@ -63,25 +61,22 @@ class Autos():
         
     def MostrarDatos(self):
         print("Gracias por comprar en nuestro concecionario :D")
-        print("Marca del vehiculo: ")
-        print("Modelo del vehiculo: ")
-        print("Año del vehiculo: ")
-        print("Color del Vehiculo: ")
-        print("Tipo de vehiculo: ")
-        print("VIN: ")
-        print("Numero de Motor: ")
-        print("Cantidad de Asientos: ")
-        print("Cantidad de Ruedas: ")
+        print("Marca del vehiculo: ",self.Marca)
+        print("Modelo del vehiculo: ",self.Modelo)
+        print("Año del vehiculo: ",self.Año)
+        print("Color del Vehiculo: ",self.Color)
+        print("Tipo de vehiculo: ",self.Tipo)
+        print("VIN: ",self.Vin)
+        print("Numero de Motor: ",self.Numero_Motor)
+        print("Cantidad de Asientos: ",self.Asientos)
+        print("Cantidad de Ruedas: ",self.Ruedas)
         self.InfoDelVehiCULO()
 
 Carro=Autos()
 print("***********************Factura****************************")
-print("Hola bienvenido al Concecionario de Marine Ford")
-Carro.RegistrarVehiculo
-print("Te Esperamos :D")
-Carro.MostrarDatos
+Carro.RegistrarVehiculo()
 print("**********************************************************")
-
+Carro.MostrarDatos()
+print("******************Larin Estuvo Aqui***********************")
+print("Te Esperamos :D")
         
-
-

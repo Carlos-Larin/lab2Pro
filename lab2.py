@@ -63,7 +63,6 @@ class Libro():
         print("Estado= ", self.Estado)
         print("*****************************************")
 
-
 Libro1=Libro()
 Libro2=Libro()
 

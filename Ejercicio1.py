@@ -1,3 +1,4 @@
+#aqui inicie la clase 
 class ElPerroj():
     Tipo = "Perro"
     NombrePerro = ""
@@ -15,7 +16,7 @@ class ElPerroj():
     def RegistrarPerro(self):
         self.Estado = "Atendido"
         print("ATENDIDO :D")
-    
+#usare esta parte para ver cuando sea grande o pequeño   
     def PesoPerro(self):
         if self.Peso > 10:
             print(f"Perro Grande su peso es: {self.Peso} kg")
@@ -31,7 +32,7 @@ class ElPerroj():
         self.Dueño = Dueño
         self.Peso = PesoPerro
         self.Estado=Estado
-
+#aqui es donde el usuario ingresa los datos de la mascota
     def RecibirDatosDelPerro(self):
         print("**************Doctor Chopper****************")
         NomPer = input("Nombre de la Mascota: ")
@@ -43,7 +44,7 @@ class ElPerroj():
         Estado=input("El perro ya Fue atendido? (S/N): ").lower()
         print("*********************************************")
         self.DatosPerro("Perro", NomPer, RazaBand, Edad, ColorPelaje, Dueño, PesoPerro,Estado)
-    
+#aqui el usuario se le mostraran los datos en consola   
     def MostrarDatosPerro(self):
         print("**************Doctor Chopper****************")
         print("El Nombre del perro es: ", self.NombrePerro)

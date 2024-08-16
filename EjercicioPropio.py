@@ -23,7 +23,7 @@ class Farmacia:
         
     def DatosCompra(self):
         self.Cobro()
-    
+ #aqui es donde el usuario ingresa los datos de la Compra  
     def RegistrarCompra(self):
         print("***** Bienvenido al sistema nakama *****")
         self.TipoMedicamento = input("¿Llevaras Medicamento con Receta? (S/N): ").lower()
@@ -44,7 +44,7 @@ class Farmacia:
         print(f"Cantidad: {self.Cantidad}")
         self.DatosCompra()
 
-#por aki entran los datos
+#Creacion de una instancia de Farmacia
 Compra1 = Farmacia()
 print("*********** Bienvenido al sistema ***********")
 Compra1.RegistrarCompra()

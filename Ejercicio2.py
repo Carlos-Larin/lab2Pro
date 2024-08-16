@@ -1,4 +1,6 @@
 #Echo por Carlos Larin y con una playlist de rock a media noche
+#se llma asi porque es para el ejercicio 2 la papeleria
+
 class Papeleria():
     Cuaderno = ""
     Lapices = ""
@@ -14,7 +16,7 @@ class Papeleria():
         self.Ganancia = 0
         self.Cuaderno = ""
         self.Lapices = ""
-        
+#aqui lo que hice esque me base en las 4 opciones de productos para hacer una funcion por los cuadernos como por los lapices  
     def TipoCuaderno(self):
         if self.Cuaderno == "grande":
             self.PrecioVenta = (self.CantidadCuadernos * 3.50) * 1.30
@@ -42,7 +44,7 @@ class Papeleria():
     def DatosCompra(self):
         self.TipoCuaderno()
         self.TipoLapices()
-    
+#aqui es donde el usuario ingresa los datos de la Compra 
     def RegistrarCompra(self):
         print("*****Bienvenido al sistema nakama*****")
         self.LlevasCuadernos = input("¿Llevarás cuadernos? (S/N): ").lower()
@@ -59,7 +61,7 @@ class Papeleria():
         else: 
             print("Recuerda, tenemos producto exclusivo en lápices.")
         print("**********************************************")   
-
+#sistema de Salida de Datos
     def MostrarDatosCompras(self):
         print("*****Bienvenido al sistema nakama*****")
         print("Estado Cuadernos: ", self.LlevasCuadernos)

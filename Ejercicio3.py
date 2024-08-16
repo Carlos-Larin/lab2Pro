@@ -5,7 +5,7 @@
 #precio de venta de cada auto es igual al precio de compra multiplicado
 #por 1.4 que corresponde a su margen de ganancia.
 
-
+#aqui lleva el nombre de esa clase porque se trata de un concecionario
 class Autos():
     Marca=""
     Modelo=""
@@ -19,6 +19,7 @@ class Autos():
     Asientos=0
     Ruedas=0
 
+#he aqui el Bob Constructor
     def __init__(self):
         self.PrecioCosto=0
         self.PrecioVenta=0
@@ -27,12 +28,13 @@ class Autos():
         self.Asientos=0
         self.Ruedas=0
 
+#como saldra el area de compra
     def InfoDelVehiCULO(self):
         self.PrecioVenta=self.PrecioCosto*1.4
         print(f"El vehiculo fue adquerido a: ${self.PrecioCosto}")
         print(f"El vehiculo queda a: ${self.PrecioVenta}")
         
-
+ #aqui es donde el usuario ingresa los datos de la Compra  
     def RegistrarVehiculo(self):
         print("Hola bienvenido al Concecionario de Marine Ford")
         self.Marca=input("Marca del vehiculo: ")
@@ -58,7 +60,7 @@ class Autos():
         self.PrecioVenta=PrecioVenta
         self.Asientos=Asientos    
         self.Ruedas=Ruedas
-        
+#la salida de los datos       
     def MostrarDatos(self):
         print("Gracias por comprar en nuestro concecionario :D")
         print("Marca del vehiculo: ",self.Marca)
